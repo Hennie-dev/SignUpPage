@@ -1,5 +1,32 @@
+
 *{
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'Vogue';
+    src: url('./fonts/Vogue.ttf') format('.ttp');
+}
+
+#heroHeader{
+    position: relative;
+    font-family: 'Vogue';
+    color: white;
+    font-size: 5em;
+    left: 1%;
+    text-shadow: 0 0 3px #000000, 0 0 5px #9b7329;
+}
+
+#subScript{
+    position: relative;
+    font-family: 'Vogue';
+    color: white;
+    font-size: 2em;
+    left: 1%;
+    width: 45%;
+    text-shadow: 0 0 3px #000000, 0 0 5px #9b7329;
 }
 
 #fullback{
@@ -9,18 +36,22 @@
     background-size: cover;
     height: 100vh;
     width: auto;
-    transform: scaleX(-1);
+    overflow: hidden;
 }
 
 #signUpContainer{
     position: absolute;
     top: 10%;
-    left: 5%;
+    right: 5%;
     height: 80vh;
-    width: 50vw;
-    background-color: rgba(55,55,55,0.93);
+    width: 40vw;
+    background-color: rgba(55,55,55,0.88);
     animation: moveInLeft 0.3s 1 forwards ease;
     border-radius: 60px;
+
+    &:hover{
+        background-color: rgba(55,55,55,0.95);
+    }   
 }
 
 @keyframes moveInLeft {
