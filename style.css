@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+}
+
+#fullback{
+    margin: 0px;
+    box-sizing: border-box;
+    background-image: url('./resources/pexels-olly-3771055.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    transform: scaleX(-1);
+}
+
+#signUpContainer{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    height: 80vh;
+    width: 50vw;
+    background-color: rgba(55,55,55,0.93);
+    animation: moveInLeft 0.3s 1 forwards ease;
+    border-radius: 60px;
+}
+
+@keyframes moveInLeft {
+    from{
+        transform: scale(0);
+    }
+    to {
+        transform: scale(50vw);
+    }
+}
