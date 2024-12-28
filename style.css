@@ -5,28 +5,29 @@
     box-sizing: border-box;
 }
 
-@font-face{
-    font-family: 'Vogue';
-    src: url('./fonts/Vogue.ttf') format('.ttp');
-}
+.lobster-regular {
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 #heroHeader{
-    position: relative;
-    font-family: 'Vogue';
+    
     color: white;
     font-size: 5em;
+    top: 5vh;
     left: 1%;
-    text-shadow: 0 0 3px #000000, 0 0 5px #9b7329;
+    animation: flickerAnimation .5s infinite;
 }
 
 #subScript{
-    position: relative;
-    font-family: 'Vogue';
+
     color: white;
-    font-size: 2em;
+    font-size: 3em;
+    top: 6vh;
     left: 1%;
-    width: 45%;
-    text-shadow: 0 0 3px #000000, 0 0 5px #9b7329;
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+    
 }
 
 #fullback{
@@ -37,22 +38,103 @@
     height: 100vh;
     width: auto;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 
 #signUpContainer{
-    position: absolute;
+    color: white;
     top: 10%;
     right: 5%;
-    height: 80vh;
-    width: 40vw;
+    height: 600px;
+    width: 600px;
     background-color: rgba(55,55,55,0.88);
     animation: moveInLeft 0.3s 1 forwards ease;
     border-radius: 60px;
+    margin: 2%;
+    flex: none;
 
     &:hover{
         background-color: rgba(55,55,55,0.95);
+        box-shadow: 0 0 15px #fcc755;;
     }   
 }
+
+#seperator{
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    border-left: 1px solid rgb(49, 49, 49);
+    left: 38%;
+}
+
+#heroContainer{
+
+    flex-direction: column;
+    margin: 2%;
+
+}
+
+#myform{
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#inputholder{
+    position: absolute;
+    top: 10vh;
+    left: calc(50% - 60px);
+    & input{
+        margin-bottom: 10vh;
+        font-size: 1.5em;
+        border: none;
+        border-radius: 30px;
+        
+    } 
+    
+    & input:hover{
+
+        box-shadow: 0 0 15px #fcc755;
+
+    }
+
+    & select{
+
+        border: none;
+        border-radius: 30px;
+        font-size: 1.5em;
+        text-align: center;
+        width: 40%;
+
+    }
+
+    & select:hover{
+
+        box-shadow: 0 0 15px #fcc755;
+
+    }
+}
+
+#labelholder{
+    text-align: right;
+    position: absolute;
+    right: calc(50% + 150px);
+    top: 10vh;
+}
+
+#labelholder label{
+    display: block;
+    font-size: 1.5em;
+    padding-bottom: 10vh;
+
+    &:hover{
+        text-shadow: 0 0 15px #fcc755;
+    }
+}
+
+
 
 @keyframes moveInLeft {
     from{
@@ -61,4 +143,10 @@
     to {
         transform: scale(50vw);
     }
+}
+
+@keyframes flickerAnimation {
+    0%   { text-shadow: 0 0 15px #fcc755; }
+    50%  { text-shadow: none; }
+    100% { text-shadow: 0 0 15px #fcc755; }
 }

@@ -5,13 +5,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Awesome Signup!</title>
         <link href="./style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="fullback">
-            <h1 id="heroHeader">Welcome!</h1>
-            <h2 id="subScript">Please sign up for awesome content...</h2>
+            <div id="heroContainer">
+                <h1 id="heroHeader" class="lobster-regular">Welcome!</h1>
+                <h2 id="subScript" class="lobster-regular">Please sign up to stay up to date with the latest information...</h2>
+            </div>
             <div id="signUpContainer">
-
+                <div id="seperator"></div>
+                <form id=myform action="https://httpbin.org/post" method="post">
+                    <div id="labelholder" class="lobster-regular">
+                    <p>
+                        <label for="name" id="namelabel" aria-label="required"> Name:</label>
+                    </p>
+                    <p>
+                        <label for="surname" id="surnamelabel" aria-label="required">Surname:</label>
+                    </p>
+                    <p>
+                        <label for="email" id="idlabel" aria-label="required">Email:</label>
+                    </p>
+                    <p>
+                        <label for="sex" id="sexlabel" aria-label="required">Sex:</label>
+                    </p>
+                    </div>
+                    <div id="inputholder">
+                        <p>  
+                            <input type="text" id="name" name="name">
+                        </p>
+                        <p>
+                            <input type="text" id="surname" name="surname">
+                        </p>
+                        <p>
+                            <input type="email" id="email" name="email">
+                        </p>
+                        <p>
+                            <select name="sex" id="sex">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                            </select>
+                        </p>
+                    </div>
+                </form>
             </div>            
         </div>
     </body>
