@@ -30,6 +30,13 @@
     
 }
 
+#heroContainer{
+
+    flex-direction: column;
+    margin: 2%;
+
+}
+
 #fullback{
     margin: 0px;
     box-sizing: border-box;
@@ -63,23 +70,18 @@
 
 #seperator{
     position: absolute;
-    height: 80%;
+    height: 70%;
     top: 10%;
     border-left: 1px solid rgb(255, 255, 255);
     left: 32%;
-}
-
-#heroContainer{
-
-    flex-direction: column;
-    margin: 2%;
-
 }
 
 #myform{
     position: relative;
     align-items: center;
     justify-content: space-between;
+    height: 600px;
+    width: 600px;
 
 }
 
@@ -108,7 +110,7 @@
         border-radius: 30px;
         font-size: 1.5em;
         text-align: center;
-        width: 40%;
+        width: 100%;
 
     }
 
@@ -138,6 +140,25 @@ input{
 
     &:hover{
         text-shadow: 0 0 15px #fcc755;
+    }
+}
+
+#submitButton{
+    position: absolute;
+    display: block;
+    left:40%;
+    top: 85%;
+    width: 20%;
+    height: 10%;
+    border: none;
+    border-radius: 30px;
+    font-family: "Lobster", serif;
+    font-size: 1.2em;
+    color: rgba(55,55,55,0.95);
+
+    &:hover{
+        text-shadow: 0 0 15px #fcc755;
+        box-shadow: 0 0 15px #fcc755;
     }
 }
 
