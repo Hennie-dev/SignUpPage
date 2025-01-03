@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #1E1B14;
+}
 
 .lobster-regular {
     font-family: "Lobster", serif;
@@ -11,55 +14,56 @@
     font-style: normal;
   }
 
+#fullback{
+    position: relative;
+    margin: 0px;
+    box-sizing: border-box;
+    background-image: url('./resources/pexels-olly-3771055.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 80vw;
+    left:10vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
 #heroHeader{
-    
+    position: absolute;
+    width: 100%;
     color: white;
-    font-size: 5em;
+    font-size:9em;
     top: 5vh;
     left: 1%;
     animation: flickerAnimation .5s infinite;
 }
 
 #subScript{
-
+    position:absolute;
     color: white;
     font-size: 3em;
-    top: 6vh;
-    left: 1%;
+    width:35vw;
+    top: 50vh;
+    left: 4vw;
     text-shadow: 0 0 3px #000000, 0 0 5px #000000;
     
 }
 
 #heroContainer{
-
+    width: 39vw;
     flex-direction: column;
     margin: 2%;
 
 }
 
-#fullback{
-    margin: 0px;
-    box-sizing: border-box;
-    background-image: url('./resources/pexels-olly-3771055.jpg');
-    background-size: cover;
-    height: 100vh;
-    width: auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-}
-
 #signUpContainer{
-    position: relative;
+    position: absolute;
     color: white;
-    top: 15%;
-    right: 5%;
-    height: 600px;
+    height: 100vh;
     width: 600px;
+    right: 0px;
     background-color: rgba(55,55,55,0.88);
     animation: moveInLeft 0.3s 1 forwards ease;
-    border-radius: 60px;
-    margin: 2%;
     flex: none;
 
     &:hover{
@@ -70,10 +74,10 @@
 
 #seperator{
     position: absolute;
-    height: 70%;
+    height: 45%;
     top: 10%;
     border-left: 1px solid rgb(255, 255, 255);
-    left: 32%;
+    left: 40%;
 }
 
 #myform{
@@ -88,9 +92,9 @@
 #inputholder{
     position: absolute;
     top: 10vh;
-    left: calc(50% - 60px);
+    left: calc(50%);
     & input{
-        margin-bottom: 10vh;
+        margin-bottom: 18.5%;
         font-size: 1.5em;
         border: none;
         border-radius: 30px;
@@ -124,19 +128,23 @@
 input{
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    &:invalid{
+        box-shadow: 0 0 10px red;
+    }
 }
 
 #labelholder{
     text-align: right;
     position: absolute;
-    right: calc(50% + 150px);
+    right: calc(50% + 110px);
     top: 10vh;
 }
 
 #labelholder label{
     display: block;
     font-size: 1.5em;
-    padding-bottom: 10vh;
+    padding-bottom: 24%;
 
     &:hover{
         text-shadow: 0 0 15px #fcc755;
@@ -146,14 +154,14 @@ input{
 #submitButton{
     position: absolute;
     display: block;
-    left:40%;
-    top: 85%;
-    width: 20%;
+    left:33%;
+    top: 70vh;
+    width: 33%;
     height: 10%;
     border: none;
     border-radius: 30px;
     font-family: "Lobster", serif;
-    font-size: 1.2em;
+    font-size: 1.7em;
     color: rgba(55,55,55,0.95);
 
     &:hover{
@@ -162,6 +170,30 @@ input{
     }
 }
 
+#footerText{
+    position: absolute;
+    width: 100%;
+    top:115%;
+    text-align: center;
+    font-family: "Lobster", serif;
+
+    & a:link{
+        color: #fcc755;
+    }
+
+    & a:visited{
+        color: #f7a901
+    }
+
+    & a:hover{
+        color: white;
+        text-shadow: 0 0 15px #fcc755;
+    }
+
+    & a:active{
+        color: #000;
+    }
+}
 
 
 @keyframes moveInLeft {

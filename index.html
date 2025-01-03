@@ -30,7 +30,13 @@
                         <label for="email" id="idlabel" aria-label="required">Email:</label>
                     </p>
                     <p>
-                        <label for="sex" id="sexlabel" aria-label="required">Sex:</label>
+                        <label for="password" id="passwordLabel" aria-label="required">Password:</label>
+                    </p>
+                    <p>
+                        <label for="confirmPassword" id="confirmPasswordLabel" aria-label="required">Confirm Password:</label>
+                    </p>
+                    <p>
+                        <label for="gender" id="genderlabel" aria-label="required">Gender:</label>
                     </p>
                     </div>
                     <div id="inputholder">
@@ -44,13 +50,22 @@
                             <input type="email" id="email" name="email">
                         </p>
                         <p>
-                            <select name="sex" id="sex">
+                            <input type="password" id="password" name="password">
+                        </p>
+                        <p>
+                            <input type="password" id="confirmPassword" name="confirmPassword">
+                        </p>
+                        <p>
+                            <select name="gender" id="gender">
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
+                                    <option value="other">Other</option>
                             </select>
                         </p>
                     </div>
                     <button type="submit" id="submitButton">Submit</button>
+                    <p id="footerText"> Already have an account? <a href="#">Sign in</a>
+                    </p>
                 </form>
             </div>            
         </div>
