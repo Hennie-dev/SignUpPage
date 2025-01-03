@@ -178,7 +178,7 @@ input{
 #footerText{
     position: absolute;
     width: 100%;
-    top:115%;
+    top:80vh;
     text-align: center;
     font-family: "Lobster", serif;
 
@@ -200,6 +200,31 @@ input{
     }
 }
 
+#suppInfo{
+    position:absolute;
+    width: 100%;
+    text-align: center;
+    top: 95vh;
+    font-size: 0.8em;
+
+    & a:link{
+        color: #fcc755;
+    }
+
+    & a:visited{
+        color: #f7a901
+    }
+
+    & a:hover{
+        color: white;
+        text-shadow: 0 0 15px #fcc755;
+    }
+
+    & a:active{
+        color: #000;
+    }
+
+}
 
 @keyframes moveInLeft {
     from{
